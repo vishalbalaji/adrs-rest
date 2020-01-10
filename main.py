@@ -27,3 +27,7 @@ class ADRSRest(Resource):
         npimg = np.fromstring(uploaded_file, np.uint8)
         img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
         return fd.mark_faults(img)
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
